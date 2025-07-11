@@ -1,13 +1,13 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Custom scroll behavior for smooth scrolling to sections */
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Optional: Apply Inter font globally if not already using it via Tailwind's config */
+body {
+  font-family: 'Inter', sans-serif;
 }
