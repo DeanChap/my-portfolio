@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: "Severless Contact-form",
       description:
-        "Developed a secure, scalable contact form with AWS Lambda, API Gateway, DynamoDB, S3. Terraform for IaC, GitHub Actions for CI/CD, plus API security and CloudWatch monitoring.",
+        "Developed and scaled a contact form using AWS Lambda, API Gateway, DynamoDB, S3, managed with Terraform (IaC) and GitHub Actions (CI/CD).",
       imageUrl: "/images/C_form.png",
       live: "https://github.com/DeanChap/AWS-severless-contact-form",
       gitcode: "https://github.com/DeanChap/AWS-severless-contact-form",
@@ -35,7 +35,7 @@ const Projects = () => {
       className="min-h-screen flex flex-col justify-center items-center py-20 px-4 bg-gray-100 dark:bg-black transition-colors duration-300 text-center"
     >
       <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-12">
-        My Projects
+        Projects
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full mt-12 cursor-pointer">
         {projects.map((project, index) => (

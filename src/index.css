@@ -1,13 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: Custom scroll behavior for smooth scrolling to sections */
 html {
   scroll-behavior: smooth;
 }
 
-/* Optional: Apply Inter font globally if not already using it via Tailwind's config */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }

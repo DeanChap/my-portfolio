@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <div className="font-sans min-h-screen text-black dark:text-white bg-white dark:bg-black transition-colors duration-300">
+      <div className="font-monospace min-h-screen text-black dark:text-white bg-white dark:bg-black transition-colors duration-300">
         <Navbar isVisible={showNavbar} />
         <main>
           <Home />
