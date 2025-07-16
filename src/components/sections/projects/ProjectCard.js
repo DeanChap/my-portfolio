@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
             "https://placehold.co/400x250/CCCCCC/333333?text=Image+Not+Found";
         }}
       />
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-2xl font-semibold text-black dark:text-white mb-2">
           {project.title}
         </h3>
