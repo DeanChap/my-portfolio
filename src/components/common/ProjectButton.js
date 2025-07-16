@@ -5,14 +5,7 @@ const ProjectButton = ({ href, children, primary = false, outline = false }) => 
   const primaryClasses = "bg-black text-white hover:bg-gray-950 dark:bg-white dark:text-black dark:hover:bg-gray-200";
   const outlineClasses = "border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black";
 
-  let classes = baseClasses;
-  if (primary) {
-    classes += ` ${primaryClasses}`;
-  } else if (outline) {
-    classes += ` ${outlineClasses}`;
-  } else {
-    classes += ` ${primaryClasses}`; // Default to primary if neither specified
-  }
+  const classes = `${baseClasses} ${primary ? primaryClasses : outline ? outlineClasses : primaryClasses}`;
 
   return (
     <a href={href} className={classes}>
