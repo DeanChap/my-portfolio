@@ -23,7 +23,7 @@ const ProjectCard = ({ project }) => {
         </p>
         <div className="flex justify-center space-x-4 mt-auto">
           <ProjectButton href={project.live} primary>
-            View Live
+            Live
           </ProjectButton>
           <ProjectButton href={project.gitcode} outline>
             Code

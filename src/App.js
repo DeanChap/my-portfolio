@@ -32,7 +32,7 @@ export default function App() {
         </main>
         <footer className="bg-black dark:bg-gray-900 text-white dark:text-gray-200 py-6 text-center transition-colors duration-300">
           <div className="container mx-auto px-4">
-            <p>&copy; {new Date().getFullYear()} Dean. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Designed and Developed by Deano. All rights reserved.</p>
             <p className="text-sm mt-2">Built with React and Tailwind CSS</p>
           </div>
         </footer>

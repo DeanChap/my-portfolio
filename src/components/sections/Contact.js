@@ -75,7 +75,7 @@ const Contact = () => {
       <div className="mt-12 flex space-x-6">
         <SocialLink href="https://github.com/DeanChap" icon={<Github size={28} />} label="GitHub" />
         <SocialLink href="https://www.linkedin.com/in/dean-chap-721537187/" icon={<Linkedin size={28} />} label="LinkedIn" />
-        <SocialLink href="deanchaps@gmail.com" icon={<Mail size={28} />} label="Email" />
+        <SocialLink href="mailto:deanchaps@gmail.com" icon={<Mail size={28} />} label="Email" />
       </div>
     </section>
   );
