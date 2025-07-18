@@ -4,7 +4,7 @@ import Navbar from "./components/layout/Navbar";
 import Home from "./components/sections/Home";
 import About from "./components/sections/About";
 import Projects from "./components/sections/Projects";
-import Contacts from "./components/sections/Contacts";
+import Contact from "./components/sections/Contact";
 import Skills from "./components/sections/Skills";
 
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
           <About />
           <Projects />
           <Skills />
-          <Contacts />
+          <Contact />
         </main>
         <footer className="bg-black dark:bg-gray-900 text-white dark:text-gray-200 py-6 text-center transition-colors duration-300">
           <div className="container mx-auto px-4">

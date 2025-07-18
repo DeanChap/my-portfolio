@@ -17,7 +17,7 @@ const ContactItem = ({ icon: IconComponent, title, link, linkText, iconColorClas
         <h3 className="text-md font-semibold text-gray-800 dark:text-gray-100">
           {title}
         </h3>
-        <span className={`${linkColorClass} text-lg`}> {/* Use span for text, not a, to prevent nested anchors */}
+        <span className={`${linkColorClass} text-lg`}>
           {linkText}
         </span>
       </div>

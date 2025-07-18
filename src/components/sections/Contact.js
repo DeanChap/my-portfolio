@@ -1,84 +1,72 @@
-import React, { useState } from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
-import SocialLink from './contact/SocialLink'; 
-const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [statusMessage, setStatusMessage] = useState('');
+import React from "react";
+import ContactItem from './contact/ContactItem';
+import { Mail, Phone, Linkedin, Github} from 'lucide-react'; 
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData); // In a real application, you would send this to a backend service.
-    setStatusMessage("Thank you for your message! I'll get back to you soon.");
-    setFormData({ name: '', email: '', message: '' }); // Clear form
-    setTimeout(() => setStatusMessage(''), 5000); // Clear message after 5 seconds
-  };
+const Contacts = () => {
+  const contactMethods = [
+    {
+      icon: Mail,
+      title: "Email",
+      link: "mailto:deanchaps@gmail.com",
+      // linkText: "deanchaps@gmail.com",
+      iconColorClass: "text-blue-600 dark:text-blue-400",
+      linkColorClass: "text-black dark:text-white",
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      link: "tel:+1234567890",
+      iconColorClass: "text-green-600 dark:text-green-400",
+      linkColorClass: "text-green-600 dark:text-green-400",
+    },
+    {
+      icon: Linkedin,
+      title: "LinkedIn",
+      link: "https://www.linkedin.com/in/dean-chap-721537187/",
+      iconColorClass: "text-blue-700 dark:text-blue-300",
+      linkColorClass: "text-blue-700 dark:text-blue-300",
+    },
+    {
+      icon: Github,
+      title: "GitHub",
+      link: "https://github.com/DeanChap",
+      iconColorClass: "text-purple-600 dark:text-purple-400",
+      linkColorClass: "text-purple-600 dark:text-purple-400",
+    },
+  ];
 
   return (
-    <section id="contact" className="min-h-screen flex flex-col justify-center items-center py-20 px-4 bg-white dark:bg-gray-950 transition-colors duration-300 text-center">
-      <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-8">Contact Me</h2>
-      <div className="w-full max-w-lg bg-white dark:bg-black p-8 rounded-xl shadow-lg dark:shadow-xl mt-8">
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="name" className="block text-left text-gray-800 dark:text-gray-200 text-sm font-medium mb-2">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-950 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-left text-gray-800 dark:text-gray-200 text-sm font-medium mb-2">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-950 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
-            />
-          </div>
-          <div>
-            <label htmlFor="message" className="block text-left text-gray-800 dark:text-gray-200 text-sm font-medium mb-2">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows="5"
-              className="w-full p-3 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-950 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="bg-black text-white py-3 px-6 rounded-full font-semibold hover:bg-gray-200 dark:bg-white dark:text-black dark:hover:bg-gray-200 hover:text-black
-                       transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transform hover:scale-105"
-          >
-            Send Message
-          </button>
-          {statusMessage && (
-            <p className="mt-4 text-center text-green-600 dark:text-green-400">
-              {statusMessage}
-            </p>
-          )}
-        </form>
+    <section
+      id="contact"
+      className="min-h-screen flex flex-col justify-center items-center py-20 px-4 bg-gray-100 dark:bg-black transition-colors duration-300 text-center"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-8">
+        Contact Me
+      </h2>
+
+      <div className="w-full max-w-lg bg-gray-100 dark:bg-black flex flex-col p-8 gap-4 rounded-xl shadow-lg dark:shadow-xl mt-12">
+        <h4 className="text-lg text-gray-700 dark:text-gray-300 mb-8 text-center">
+          Click on links!
+        </h4>
+
+        {contactMethods.map((method) => (
+          <ContactItem
+            key={method.title}
+            icon={method.icon}
+            title={method.title}
+            link={method.link}
+            linkText={method.linkText}
+            iconColorClass={method.iconColorClass}
+            linkColorClass={method.linkColorClass}
+          />
+        ))}
       </div>
-      <div className="mt-12 flex space-x-6">
-        <SocialLink href="https://github.com/DeanChap" icon={<Github size={28} />} label="GitHub" />
-        <SocialLink href="https://www.linkedin.com/in/dean-chap-721537187/" icon={<Linkedin size={28} />} label="LinkedIn" />
-        <SocialLink href="mailto:deanchaps@gmail.com" icon={<Mail size={28} />} label="Email" />
-      </div>
+
+      <p className="text-sm text-gray-500 dark:text-gray-400 mt-8 text-center">
+        Looking forward to connecting with you!
+      </p>
     </section>
   );
 };
 
-export default Contact;
+export default Contacts;

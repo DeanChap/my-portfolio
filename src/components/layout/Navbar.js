@@ -1,16 +1,21 @@
-import React from 'react';
-import { Sun, Moon } from 'lucide-react';
-import { useTheme } from '../ThemeContext'; // Corrected path
-import NavLink from './NavLink'; // Corrected path
+import React from "react";
+import { Sun, Moon } from "lucide-react";
+import { useTheme } from "../ThemeContext";
+import NavLink from "./NavLink";
 
 const Navbar = ({ isVisible }) => {
   const { darkMode, toggleDarkMode } = useTheme();
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 shadow-md dark:shadow-lg transition-all duration-300
-                     ${isVisible ? 'translate-y-0 opacity-100 bg-gray-100 dark:bg-black' : '-translate-y-full opacity-0 bg-white dark:bg-black'}`}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 shadow-md dark:shadow-lg transition-all duration-300
+                     ${isVisible ? "translate-y-0 opacity-100 bg-gray-100 dark:bg-black" : "-translate-y-full opacity-0 bg-white dark:bg-black"}`}
+    >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-black text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300 rounded-md p-2 transition-colors duration-300">
+        <a
+          href="#home"
+          className="text-2xl font-black text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300 rounded-md p-2 transition-colors duration-300"
+        >
           DC
         </a>
 
