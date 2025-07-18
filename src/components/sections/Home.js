@@ -16,7 +16,7 @@ const Home = () => {
       <div className="flex space-x-6 animate-fade-in delay-400">
         <ActionButton href="https://github.com/DeanChap">Github</ActionButton>
         <ActionButton href="/Resume-Dean_Chap.pdf" outline download>
-          Resume
+          My Resume
         </ActionButton>
       </div>
     </section>

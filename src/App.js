@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { ThemeProvider } from './components/ThemeContext';
-import Navbar from './components/layout/Navbar'; 
-import Home from './components/sections/Home'; 
-import About from './components/sections/About'; 
-import Projects from './components/sections/Projects'; 
-import Contacts from './components/sections/Contacts';
-import Skills from './components/sections/Skills';
+import React, { useState, useEffect } from "react";
+import { ThemeProvider } from "./components/ThemeContext";
+import Navbar from "./components/layout/Navbar";
+import Home from "./components/sections/Home";
+import About from "./components/sections/About";
+import Projects from "./components/sections/Projects";
+import Contacts from "./components/sections/Contacts";
+import Skills from "./components/sections/Skills";
 
 export default function App() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -15,9 +15,9 @@ export default function App() {
       setShowNavbar(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -34,7 +34,10 @@ export default function App() {
         </main>
         <footer className="bg-black dark:bg-gray-900 text-white dark:text-gray-200 py-6 text-center transition-colors duration-300">
           <div className="container mx-auto px-4">
-            <p>&copy; {new Date().getFullYear()} Designed and Developed by Deano. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} Designed and Developed by Deano.
+              All rights reserved.
+            </p>
             <p className="text-sm mt-2">Built with React and Tailwind CSS</p>
           </div>
         </footer>

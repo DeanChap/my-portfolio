@@ -10,7 +10,7 @@ const Skills = () => {
       "SQL",
       "Terraform",
     ],
-    "Frameworks": ["ReactJS", "Node", "Express"],
+    Frameworks: ["ReactJS", "Node", "Express"],
     Databases: ["MySQL", "MongoDB"],
     "Cloud Platforms": ["AWS", "Azure"],
     "Tools & Others": [
