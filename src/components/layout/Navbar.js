@@ -18,7 +18,8 @@ const Navbar = ({ isVisible }) => {
           <NavLink href="#home">Home</NavLink>
           <NavLink href="#about">About Me</NavLink>
           <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#contact">Contact Me</NavLink>
+          <NavLink href="#skills">Skills</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
         </div>
 
         <button

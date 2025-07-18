@@ -3,7 +3,7 @@ import ProjectButton from "../../common/ProjectButton";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-white dark:bg-gray-950 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-4 transition-all duration-300 overflow-hidden min-h-[30rem] flex flex-col">
+    <div className="bg-white dark:bg-gray-950 flex flex-col rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-4 transition-all duration-300 overflow-hidden min-h-[30rem]">
       <img
         src={project.imageUrl}
         alt={project.title}

@@ -20,7 +20,7 @@ const Contact = () => {
   return (
     <section id="contact" className="min-h-screen flex flex-col justify-center items-center py-20 px-4 bg-white dark:bg-gray-950 transition-colors duration-300 text-center">
       <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-8">Contact Me</h2>
-      <div className="w-full max-w-md bg-white dark:bg-black p-8 rounded-xl shadow-lg dark:shadow-xl mt-8">
+      <div className="w-full max-w-lg bg-white dark:bg-black p-8 rounded-xl shadow-lg dark:shadow-xl mt-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-left text-gray-800 dark:text-gray-200 text-sm font-medium mb-2">Name</label>

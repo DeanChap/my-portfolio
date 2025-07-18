@@ -32,11 +32,8 @@ const About = () => {
           constantly exploring new technologies and refining my craft.
         </p>
         <p>
-        Outside
-          of tech, I enjoy staying updated on industry trends, playing chess,
-          and kicking a soccer ball around with friends and family.
-          If you're ready to bridge the gap between technical complexity and
-          real business value, let's connect.
+          Outside of tech, I enjoy staying updated on industry trends, playing
+          chess, and kicking a soccer ball around with friends and family.
         </p>
       </div>
     </section>
