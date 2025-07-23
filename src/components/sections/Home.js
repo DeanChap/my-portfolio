@@ -14,7 +14,7 @@ const Home = () => {
         Software Developer | Cloud Soutions Architect
       </p>
       <div className="flex space-x-6 animate-fade-in delay-400">
-        <ActionButton href="https://github.com/DeanChap">Github</ActionButton>
+        <ActionButton href="#contact">My Info</ActionButton>
         <ActionButton href="/Resume-Dean_Chap.pdf" outline download>
           My Resume
         </ActionButton>
